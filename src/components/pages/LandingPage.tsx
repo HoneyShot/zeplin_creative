@@ -16,14 +16,14 @@ export default function LandingPage() {
         const smoothScrolling = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
             const anchor = target.closest('a[href^="#"]');
-            
+
             if (anchor) {
                 const href = anchor.getAttribute('href');
                 if (href && href.startsWith('#')) {
                     e.preventDefault();
                     const targetId = href.substring(1);
                     const targetElement = document.getElementById(targetId);
-                    
+
                     if (targetElement) {
                         const headerOffset = 100;
                         const elementPosition = targetElement.getBoundingClientRect().top;
@@ -42,7 +42,7 @@ export default function LandingPage() {
         };
 
         document.addEventListener('click', smoothScrolling);
-        
+
         return () => {
             document.removeEventListener('click', smoothScrolling);
         };
@@ -53,7 +53,7 @@ export default function LandingPage() {
         if (hash) {
             const targetId = hash.substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 setTimeout(() => {
                     const headerOffset = 100;
@@ -74,7 +74,7 @@ export default function LandingPage() {
             <div className="relative">
                 <HeroSection />
                 <AmacVeKapsamSection />
-                <div  
+                <div
                     className="2xl:top-[40%] 2xl:right-[12%] 2xl:scale-180
                                     xl:top-[40%] xl:right-[12%] xl:scale-180
                                     lg:top-[40%] lg:right-[10%] lg:scale-170
@@ -90,13 +90,13 @@ export default function LandingPage() {
                         className="w-[280px] xl:w-[350px] 2xl:w-[420px] h-auto drop-shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300 pointer-events-auto"
                     />
                 </div>
-            </div>                   
-            <SayilarSection />         
+            </div>
+            <SayilarSection />
             <div className="relative">
                 {/* Books Image */}
-                <div 
+                <div
                     className="absolute z-10 pointer-events-none
-                        2xl:left-[4%] 2xl:top-[4.45%]
+                        2xl:left-[3.35%] 2xl:top-[4.45%]
                         xl:left-[4.30%] xl:top-[4.30%]
                         hidden xl:block
                         "
@@ -112,7 +112,7 @@ export default function LandingPage() {
                 </div>
 
                 {/* Magazine Cover */}
-                <div 
+                <div
                     className="absolute z-10 pointer-events-none
                         2xl:right-[8%] 2xl:top-[0%]
                         xl:right-[5%] xl:top-[-1%]
